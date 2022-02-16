@@ -26,7 +26,7 @@ import {
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.page}>
       <ScrollView showsHorizontalScrollIndicator={false}>
@@ -45,7 +45,9 @@ const Home = () => {
               }}>
               Hello, Thariq!
             </Text>
-            <Bell style={{marginLeft: 'auto'}} />
+            <TouchableOpacity style={{marginLeft: 'auto'}}>
+              <Bell />
+            </TouchableOpacity>
           </View>
           <View
             style={{
@@ -100,7 +102,8 @@ const Home = () => {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
-                style={{flexDirection: 'column', alignItems: 'center'}}>
+                style={{flexDirection: 'column', alignItems: 'center'}}
+                onPress={() => navigation.navigate('SwipeGame')}>
                 <Image source={Games} />
                 <Text
                   style={{

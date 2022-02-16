@@ -11,9 +11,21 @@ import Leaderboard from './leaderboard.png';
 import Qna from './qna.png';
 import Invite from './invite.png';
 import Profile1 from './profile1.png';
+import Profile2 from './profile2.png';
+import Profile3 from './profile3.png';
+import Profile4 from './Profile4.png';
+import Profile5 from './Profile5.png';
+import Profile6 from './Profile6.png';
+import Profile7 from './Profile7.png';
+import Jago from './jago.png';
+import Net from './net.png';
+import Bri from './bri.png';
+import Antam from './antam.png';
+import Logo from './logo.png';
 
 export {
   logoFlexy,
+  Logo,
   SplashBackground,
   ImageHeader,
   ImageHeader2,
@@ -23,5 +35,15 @@ export {
   Leaderboard,
   Qna,
   Invite,
+  Jago,
+  Net,
+  Bri,
+  Antam,
   Profile1,
+  Profile2,
+  Profile3,
+  Profile4,
+  Profile5,
+  Profile6,
+  Profile7,
 };

@@ -23,11 +23,17 @@ import {
   Leave,
 } from '../../assets';
 import ButtonNextTo from '../../components/ButtonNextTo';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Profile = () => {
+const Profile = ({navigation}) => {
+  const logoutHandler = async () => {
+    const logOut = await AsyncStorage.clear();
+    navigation.replace('Login');
+    return logOut;
+  };
   return (
     <View style={styles.page}>
       <ImageBackground source={ImageHeader2} style={styles.header}>
@@ -41,7 +47,9 @@ const Profile = () => {
           }}>
           My Account
         </Text>
-        <Bell style={{marginLeft: 'auto'}} />
+        <TouchableOpacity style={{marginLeft: 'auto'}}>
+          <Bell />
+        </TouchableOpacity>
       </ImageBackground>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <View
@@ -167,7 +175,8 @@ const Profile = () => {
               flexDirection: 'row',
               alignItems: 'center',
               marginTop: windowHeight * 0.0569,
-            }}>
+            }}
+            onPress={() => logoutHandler()}>
             <Leave />
             <Text
               style={{
