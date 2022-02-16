@@ -22,6 +22,9 @@ import Net from './net.png';
 import Bri from './bri.png';
 import Antam from './antam.png';
 import Logo from './logo.png';
+import LogoHeader from './flexy_logo3.png';
+import Like from './like.png';
+import Nope from './nope.png';
 
 export {
   logoFlexy,
@@ -39,6 +42,7 @@ export {
   Net,
   Bri,
   Antam,
+  LogoHeader,
   Profile1,
   Profile2,
   Profile3,
@@ -46,4 +50,6 @@ export {
   Profile5,
   Profile6,
   Profile7,
+  Like,
+  Nope,
 };
