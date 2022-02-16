@@ -6,8 +6,7 @@ import {SplashBackground, logoFlexy} from '../../assets';
 const Splash = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      // navigation.replace('Auth');
-      navigation.replace('MainApp');
+      navigation.replace('Auth');
     }, 3000);
   }, [navigation]);
   return (
